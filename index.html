@@ -3,61 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      웹화면구현:김똘똘-ㅇㅇㅇ클로닝 //TODO: 타이틀에 본인 이름 넣기
-    </title>
-    <link rel="stylesheet" href="style.css" />
+    <title>웹화면구현:이찬 - 프로그래머스 클로닝</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
+    <!-- 상단 네비게이션 바 -->
     <nav>
       <div class="container">
-        //TODO: 메뉴 완성하기 (상단메뉴바 또는 사이드메뉴바) + 화면 사이즈에
-        따라 반응형으로 변경되도록 구현하기
-        <ul>
-          <li>
-            <a href="#"
-              >메뉴 1
-              <ul>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-              </ul>
-            </a>
-          </li>
-          <li>
-            <a href="#"
-              >메뉴 2
-              <ul>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-              </ul>
-            </a>
-          </li>
-          <li>
-            <a href="#"
-              >메뉴 3
-              <ul>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-              </ul>
-            </a>
-          </li>
-          <li>
-            <a href="#"
-              >메뉴 4
-              <ul>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-                <li><a href="#">서브메뉴 1</a></li>
-              </ul>
-            </a>
-          </li>
-        </ul>
+        <!-- 프로그래머스 아이콘 -->
+        <div class="programmersIcon">
+          <a href="https://programmers.co.kr/">
+            <img src="./images/programmersIcon.svg" alt="프로그래머스 로고" />
+          </a>
+        </div>
+        <div>
+          <!-- 주요 네비게이션 메뉴 -->
+          <ul class="main-menu">
+            <li>
+              <a href="#" class="main-category">교육</a>
+              <div class="mega-menu">
+                <div class="mega-menu-wrapper">
+                  <div class="mega-menu-content">
+                    <div class="mega-category">
+                      <h3><a href="#">교육 홈</a></h3>
+                      <ul>
+                        <li><a href="#">교육 소개</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="mega-category">
+                      <h3><a href="#">강의</a></h3>
+                      <ul>
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">데브코스</a></li>
+                        <li><a href="#">영상/실습 강의</a></li>
+                        <li><a href="#">PCCP.E 자격증</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="mega-category">
+                      <h3><a href="#">MY 스쿨</a></h3>
+                      <ul>
+                        <li><a href="#">수강 중인 코스</a></li>
+                        <li><a href="#">관리 중인 코스</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="mega-category">
+                      <h3><a href="#">강사 신청</a></h3>
+                      <ul>
+                        <li><a href="#">강사/멘토풀 등록</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="mega-category" id="campus">
+                      <h3>
+                        <a href="#"
+                          ><span>캠퍼스</span
+                          ><img src="./images/launch.svg" alt="이동하기 아이콘"
+                        /></a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="main-category">데브코스(부트캠프)</a>
+            </li>
+            <li>
+              <a href="#" class="main-category">코딩테스트</a>
+            </li>
+            <li>
+              <a href="#" class="main-category"
+                >인증시험<img src="./images/launch.svg" alt="이동하기 아이콘"
+              /></a>
+            </li>
+          </ul>
+
+          <!-- 우측 메뉴 (블로그, 기업서비스, 로그인 버튼) -->
+          <div class="right-menu">
+            <!-- 여기에 추가 메뉴 버튼들 -->
+          </div>
+        </div>
       </div>
     </nav>
+
     <main>
       <div class="container">
         <h1>웹화면 구현</h1>
@@ -95,5 +127,7 @@
         //FIXME: 특히, 가져온 그림에 대한 저작권 표시를 반드시 작성하세요.
       </div>
     </footer>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
