@@ -2,11 +2,7 @@
 nav {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
 }
 
 /* 네비게이션 컨테이너 */
@@ -42,7 +38,7 @@ nav .container > div:last-child {
 }
 
 /* 반응형 스타일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 946px) {
   /* 네비게이션 컨테이너 내 여백 조정 */
   nav .container {
     padding: 0 16px;

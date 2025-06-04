@@ -43,7 +43,7 @@
 }
 
 /* 모바일 메뉴에서의 우측 메뉴 스타일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 946px) {
   .mobile-right-menu {
     width: 100%;
     display: flex;
