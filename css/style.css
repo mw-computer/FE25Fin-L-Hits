@@ -2,6 +2,7 @@
 @import "mainMenu.css";
 @import "navigation.css";
 @import "programmersIcon.css";
+@import "rightMenu.css";
 
 * {
   margin: 0;

@@ -9,6 +9,7 @@
 
 .main-menu > li {
   padding: 20px;
+  position: relative;
 }
 
 .main-menu > li > a.main-category {
@@ -18,7 +19,6 @@
   color: #263747;
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.2s;
 }
 
 .main-menu > li:hover > a.main-category {
@@ -30,51 +30,59 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 3px;
+  left: 0; /* 패딩을 포함하도록 0으로 변경 */
+  width: 100%; /* 패딩을 포함한 전체 너비로 변경 */
+  height: 2.5px;
   background-color: #0f1317;
   transform: scaleX(0);
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  z-index: 105;
 }
 
 .main-menu > li:hover > a.main-category::after {
   transform: scaleX(1);
 }
 
-/* 메가 메뉴 스타일 */
+/* 첫 번째 메가 메뉴의 캠퍼스 링크에만 상단 여백 추가 */
+.main-menu > li:first-child .mega-menu .mega-category:last-child h3:last-child {
+  margin-top: 20px;
+}
+
+/* 메가 메뉴 스타일 수정 */
 .mega-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100vw;
-  transform: translateX(calc(-50vw + 50%)) translateY(-20px); /* Y축으로 -20px 이동 시작 */
+  position: fixed; /* absolute에서 fixed로 변경 */
+  top: calc(var(--nav-height, 64px)); /* 네비게이션 높이만큼 아래로 */
+  left: 0; /* 브라우저 왼쪽 끝에 배치 */
+  width: 100vw; /* 전체 화면 너비 */
+  transform: translateY(-20px); /* Y축으로만 이동, X축 이동 제거 */
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   opacity: 0;
   visibility: hidden;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 100;
 }
 
 .main-menu > li:hover .mega-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateX(calc(-50vw + 50%)) translateY(0);
-  transition: transform 0.5s ease;
+  transform: translateY(0); /* Y축으로만 돌아오도록 수정 */
 }
 
-/* 메가메뉴 래퍼 - 중앙 정렬을 위한 컨테이너 */
+/* 메가메뉴 래퍼 */
 .mega-menu-wrapper {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 30px 20px;
+  max-width: 1200px; /* 컨테이너와 동일한 최대 너비 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 16px 0px 25px;
+  border-top: rgba(15, 19, 23, 0.2) 1px solid;
+
 }
 
 /* 메가메뉴 내용 */
 .mega-menu-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 /* 메가메뉴 카테고리 */
@@ -84,10 +92,7 @@
   display: flex; /* 추가: flex 컨테이너로 설정 */
   flex-direction: column; /* 추가: 세로 방향으로 정렬 */
   min-height: 180px; /* 추가: 최소 높이 설정 */
-}
-
-#campus {
-  justify-content: flex-start; /* 내용을 상단에 맞춤 */
+  max-width: 33.33%;
 }
 
 .mega-category h3 a {
@@ -106,15 +111,19 @@
   font-weight: 600;
   color: #263747;
   margin-bottom: 15px;
-  padding-bottom: 5px;
 }
 
 .mega-category h3:hover {
   color: #0078ff;
 }
 
+/* 캠퍼스 아이콘 호버 시 색상 변경 */
+.mega-category h3:hover img {
+  filter: invert(31%) sepia(98%) saturate(2372%) hue-rotate(196deg) brightness(104%) contrast(101%);
+}
+
+
 .mega-category ul {
-  flex-grow: 1; /* 목록이 카테고리 높이를 채우도록 확장 */
   list-style: none;
   padding: 0;
   margin: 0;

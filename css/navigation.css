@@ -16,8 +16,8 @@ nav .container {
   justify-content: space-between;
 }
 
-/* 우측 메뉴 */
-.right-menu {
+nav .container > div:last-child {
   display: flex;
-  align-items: center;
+  flex: 1;
 }
+
