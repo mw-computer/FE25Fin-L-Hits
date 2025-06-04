@@ -1,0 +1,184 @@
+[
+  {
+    "title": "교육",
+    "hasIcon": false,
+    "submenus": [
+      {
+        "title": "교육 홈",
+        "url": "https://school.programmers.co.kr/",
+        "items": []
+      },
+      {
+        "title": "강의",
+        "url": "https://school.programmers.co.kr/learn",
+        "items": [
+          {
+            "title": "전체",
+            "url": "https://school.programmers.co.kr/learn?tag=%EC%A0%84%EC%B2%B4"
+          },
+          {
+            "title": "데브코스",
+            "url": "https://school.programmers.co.kr/learn?tag=%EB%8D%B0%EB%B8%8C%EC%BD%94%EC%8A%A4"
+          },
+          {
+            "title": "영상/실습 강의",
+            "url": "https://school.programmers.co.kr/learn?tag=%EC%98%81%EC%83%81/%EC%8B%A4%EC%8A%B5%20%EA%B0%95%EC%9D%98"
+          },
+          {
+            "title": "PCCP.E 자격증",
+            "url": "https://school.programmers.co.kr/learn?tag=PCCP.E%20%EC%9E%90%EA%B2%A9%EC%A6%9D"
+          }
+        ]
+      },
+      {
+        "title": "MY 스쿨",
+        "url": "https://school.programmers.co.kr/my-courses/learning",
+        "items": [
+          {
+            "title": "수강 중인 코스",
+            "url": "https://school.programmers.co.kr/my-courses/learning"
+          },
+          {
+            "title": "관리 중인 코스",
+            "url": "https://school.programmers.co.kr/my-courses/management"
+          }
+        ]
+      },
+      {
+        "title": "강사 신청",
+        "url": "https://school.programmers.co.kr/apply-lecturer",
+        "items": [
+          {
+            "title": "강사/멘토풀 등록",
+            "url": "https://school.programmers.co.kr/apply-lecturer"
+          }
+        ]
+      },
+      {
+        "title": "캠퍼스",
+        "url": "https://campus.programmers.co.kr/my-courses/learning",
+        "items": [],
+        "hasIcon": true
+      }
+    ],
+    "isDirectLink": false,
+    "url": "https://school.programmers.co.kr/"
+  },
+  {
+    "title": "데브코스 부트캠프",
+    "hasIcon": false,
+    "submenus": [
+      {
+        "title": "데브코스 홈",
+        "url": "https://school.programmers.co.kr/learn/KDT",
+        "items": []
+      },
+      {
+        "title": "웹 데브코스",
+        "url": "https://school.programmers.co.kr/learn/courses/25072/25072-5%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B8%B0%EB%B0%98-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81",
+        "items": [
+          {
+            "title": "프론트엔드 과정",
+            "url": "https://school.programmers.co.kr/learn/courses/25072/25072-5%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B8%B0%EB%B0%98-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81"
+          },
+          {
+            "title": "백엔드 과정",
+            "url": "https://school.programmers.co.kr/learn/courses/25073/25073-6%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B8%B0%EB%B0%98-%EB%B0%B1%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81"
+          },
+          {
+            "title": "백엔드(with.ChatGPT) 과정",
+            "url": "https://school.programmers.co.kr/learn/courses/25186/25186-3%EA%B8%B0-k-digital-training-%EC%83%9D%EC%84%B1%ED%98%95-ai-%ED%99%9C%EC%9A%A9-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C"
+          },
+          {
+            "title": "풀스택 과정",
+            "url": "https://school.programmers.co.kr/learn/courses/24941/24941-7%EA%B8%B0-k-digital-training-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%EC%9B%B9-%ED%92%80-%EC%82%AC%EC%9D%B4%ED%81%B4-%EA%B0%9C%EB%B0%9Creact-nodejs"
+          }
+        ]
+      },
+      {
+        "title": "데이터 데브코스",
+        "url": "https://school.programmers.co.kr/learn/courses/24940/24940-7%EA%B8%B0-k-digital-training-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D-%EB%8D%B0%EB%B8%8C%EC%BD%94%EC%8A%A4",
+        "items": [
+          {
+            "title": "데이터 분석 과정",
+            "url": "https://school.programmers.co.kr/learn/courses/24940/24940-7%EA%B8%B0-k-digital-training-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D-%EB%8D%B0%EB%B8%8C%EC%BD%94%EC%8A%A4"
+          },
+          {
+            "title": "데이터 엔지니어링 과정",
+            "url": "https://school.programmers.co.kr/learn/courses/24943/24943-6%EA%B8%B0-k-digital-training-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81-%EB%8D%B0%EB%B8%8C%EC%BD%94%EC%8A%A4"
+          }
+        ]
+      }
+    ],
+    "isDirectLink": false,
+    "url": "https://school.programmers.co.kr/learn/KDT"
+  },
+  {
+    "title": "코딩테스트",
+    "hasIcon": false,
+    "submenus": [
+      {
+        "title": "코딩테스트 문제",
+        "url": "https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&levels=0&languages=python3",
+        "items": [
+          {
+            "title": "모든 문제",
+            "url": "https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&levels=0&languages=python3"
+          },
+          {
+            "title": "기초 문제",
+            "url": "https://school.programmers.co.kr/learn/challenges/training?order=acceptance_desc&statuses=solved&languages=python3"
+          },
+          {
+            "title": "입문 문제",
+            "url": "https://school.programmers.co.kr/learn/challenges/beginner?order=acceptance_desc&statuses=solved"
+          },
+          {
+            "title": "알고리즘 고득점 Kit",
+            "url": "https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit"
+          },
+          {
+            "title": "SQL 고득점 Kit",
+            "url": "https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit"
+          },
+          {
+            "title": "과제테스트",
+            "url": "https://school.programmers.co.kr/skill_check_assignments"
+          },
+          {
+            "title": "Q&A",
+            "url": "https://school.programmers.co.kr/learn/challenges/questions"
+          }
+        ]
+      },
+      {
+        "title": "스킬 체크",
+        "url": "https://school.programmers.co.kr/skill_checks",
+        "items": []
+      }
+    ],
+    "isDirectLink": false,
+    "url": "https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&levels=0&languages=python3"
+  },
+  {
+    "title": "인증시험",
+    "submenus": [],
+    "isDirectLink": true,
+    "hasIcon": true,
+    "url": "https://certi.programmers.co.kr/"
+  },
+  {
+    "title": "블로그",
+    "submenus": [],
+    "isDirectLink": true,
+    "hasIcon": false,
+    "url": "https://community.programmers.co.kr/blog/2"
+  },
+  {
+    "title": "기업서비스",
+    "submenus": [],
+    "isDirectLink": true,
+    "hasIcon": false,
+    "url": "https://business.programmers.co.kr/"
+  }
+]

@@ -3,6 +3,7 @@
 @import "navigation.css";
 @import "programmersIcon.css";
 @import "rightMenu.css";
+@import "mobile.css";
 
 * {
   margin: 0;
@@ -29,7 +30,15 @@ main {
 }
 
 /* 모든 링크의 상태에 대한 스타일 통일 */
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   color: inherit; /* 부모 요소의 색상을 상속 */
   text-decoration: none; /* 밑줄 제거 */
+}
+
+.box {
+  height: calc(100vh - 64px);
+  width: auto;
+  background-color: #91b8df;
 }

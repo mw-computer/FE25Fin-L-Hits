@@ -14,15 +14,49 @@ nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 64px; /* 네비게이션 높이 지정 */
 }
 
 nav .nav-content {
   display: flex;
   justify-content: space-between;
+  width: 100%; /* 전체 너비를 사용하도록 변경 */
 }
 
 nav .container > div:last-child {
   display: flex;
   flex: 1;
+}
+
+/* 햄버거 메뉴 아이콘 */
+.mobile-menu-toggle {
+  display: none !important; /* important로 강제 적용 */
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* 햄버거 메뉴 아이콘 이미지 크기 제한 */
+.mobile-menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  /* 네비게이션 컨테이너 내 여백 조정 */
+  nav .container {
+    padding: 0 16px;
+  }
+  
+  /* 메인 메뉴와 우측 메뉴 숨기기 */
+  #main-menu-container, 
+  #right-menu-container {
+    display: none;
+  }
+  
+  /* 모바일 메뉴 토글 버튼 표시 */
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
 }
 
