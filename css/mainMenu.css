@@ -95,6 +95,13 @@
   max-width: 33.33%;
 }
 
+.main-category span {
+  font-size: 0.75em;
+  margin-left: 3px;
+  color: #0078ff;
+  font-weight: bold;
+}
+
 .mega-category h3 a {
   display: flex;
   flex-direction: row;

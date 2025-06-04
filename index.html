@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>웹화면구현:이찬 - 프로그래머스 클로닝</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
@@ -17,113 +17,15 @@
             <img src="./images/programmersIcon.svg" alt="프로그래머스 로고" />
           </a>
         </div>
-        <div>
-          <!-- 주요 네비게이션 메뉴 -->
-          <ul class="main-menu">
-            <li>
-              <a href="#" class="main-category">교육</a>
-              <div class="mega-menu">
-                <div class="mega-menu-wrapper">
-                  <div class="mega-menu-content">
-                    <div class="mega-category">
-                      <h3><a href="#">교육 홈</a></h3>
-                      <h3><a href="#">강의</a></h3>
-                      <ul>
-                        <li><a href="#">전체</a></li>
-                        <li><a href="#">데브코스</a></li>
-                        <li><a href="#">영상/실습 강의</a></li>
-                        <li><a href="#">PCCP.E 자격증</a></li>
-                      </ul>
-                    </div>
+        <div class="nav-content">
+          <!-- 주요 네비게이션 메뉴 - 컴포넌트로 로드 -->
+          <div id="main-menu-container">
+            <!-- 여기에 mainMenu.html 컴포넌트가 로드됩니다 -->
+          </div>
 
-                    <div class="mega-category">
-                      <h3><a href="#">MY 스쿨</a></h3>
-                      <ul>
-                        <li><a href="#">수강 중인 코스</a></li>
-                        <li><a href="#">관리 중인 코스</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="mega-category">
-                      <h3><a href="#">강사 신청</a></h3>
-                      <ul>
-                        <li><a href="#">강사/멘토풀 등록</a></li>
-                      </ul>
-                      <h3>
-                        <a href="#"
-                          ><span>캠퍼스</span
-                          ><img src="./images/launch.svg" alt="이동하기 아이콘"
-                        /></a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="main-category">데브코스(부트캠프)</a>
-              <div class="mega-menu">
-                <div class="mega-menu-wrapper">
-                  <div class="mega-menu-content">
-                    <div class="mega-category">
-                      <h3><a href="#">데브코스 홈</a></h3>
-                      <h3><a href="#">웹 데브코스</a></h3>
-                      <ul>
-                        <li><a href="#">프론트엔드 과정</a></li>
-                        <li><a href="#">백엔드 과정</a></li>
-                        <li><a href="#">백엔드(with.ChatGPT) 과정</a></li>
-                        <li><a href="#">풀스택 과정</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="mega-category">
-                      <h3><a href="#">데이터 데브코스</a></h3>
-                      <ul>
-                        <li><a href="#">데이터 분석 과정</a></li>
-                        <li><a href="#">데이터 엔지니어링 과정</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="main-category">코딩테스트</a>
-              <div class="mega-menu">
-                <div class="mega-menu-wrapper">
-                  <div class="mega-menu-content">
-                    <div class="mega-category">
-                      <h3><a href="#">코딩테스트 문제</a></h3>
-                      <ul>
-                        <li><a href="#">모든 문제</a></li>
-                        <li><a href="#">기초 문제</a></li>
-                        <li><a href="#">입문 문제</a></li>
-                        <li><a href="#">알고리즘 고득점 Kit</a></li>
-                        <li><a href="#">SQL 고득점 Kit</a></li>
-                        <li><a href="#">과제테스트</a></li>
-                        <li><a href="#">Q&A</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="mega-category">
-                      <h3><a href="#">스킬 체크</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="main-category"
-                >인증시험<img src="./images/launch.svg" alt="이동하기 아이콘"
-              /></a>
-            </li>
-          </ul>
-
-          <!-- 우측 메뉴 (블로그, 기업서비스, 로그인 버튼) -->
-          <div class="right-menu">
-            <a href="#" class="text-link">블로그</a>
-            <a href="#" class="text-link">기업서비스</a>
-            <a href="#" class="login-button">로그인</a>
+          <!-- 우측 메뉴 - 컴포넌트로 로드 -->
+          <div id="right-menu-container">
+            <!-- 여기에 rightMenu.html 컴포넌트가 로드됩니다 -->
           </div>
         </div>
       </div>
@@ -167,6 +69,7 @@
       </div>
     </footer>
 
+    <script src="./js/components-loader.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

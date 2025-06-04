@@ -16,6 +16,11 @@ nav .container {
   justify-content: space-between;
 }
 
+nav .nav-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav .container > div:last-child {
   display: flex;
   flex: 1;
