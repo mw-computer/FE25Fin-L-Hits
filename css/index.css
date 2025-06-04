@@ -3,7 +3,9 @@
 @import "navigation.css";
 @import "programmersIcon.css";
 @import "rightMenu.css";
-@import "mobile.css";
+@import "navigationMobile.css";
+@import "eventBanner.css";
+@import "bannerAnimation.css";
 
 * {
   margin: 0;
