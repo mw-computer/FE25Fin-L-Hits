@@ -1,0 +1,14 @@
+/* 프로그래머스 로고 스타일 */
+.programmersIcon {
+  margin-right: 60px;
+}
+
+.programmersIcon a {
+  display: flex;
+  align-items: center;
+}
+
+.programmersIcon img {
+  height: 24px;
+  width: 178px;
+}

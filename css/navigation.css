@@ -1,0 +1,23 @@
+/* 네비게이션 스타일링 */
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* 네비게이션 컨테이너 */
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 우측 메뉴 */
+.right-menu {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,137 @@
+/* 메인 메뉴 스타일 */
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.main-menu > li {
+  padding: 20px;
+}
+
+.main-menu > li > a.main-category {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #263747;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-menu > li:hover > a.main-category {
+  color: #0f1317;
+}
+
+/* 메인 카테고리에 호버 시 하단 표시선 */
+.main-menu > li > a.main-category::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 3px;
+  background-color: #0f1317;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.main-menu > li:hover > a.main-category::after {
+  transform: scaleX(1);
+}
+
+/* 메가 메뉴 스타일 */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  transform: translateX(calc(-50vw + 50%)) translateY(-20px); /* Y축으로 -20px 이동 시작 */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease;
+  z-index: 100;
+}
+
+.main-menu > li:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(calc(-50vw + 50%)) translateY(0);
+  transition: transform 0.5s ease;
+}
+
+/* 메가메뉴 래퍼 - 중앙 정렬을 위한 컨테이너 */
+.mega-menu-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* 메가메뉴 내용 */
+.mega-menu-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 메가메뉴 카테고리 */
+.mega-category {
+  flex: 1;
+  padding: 0 15px;
+  display: flex; /* 추가: flex 컨테이너로 설정 */
+  flex-direction: column; /* 추가: 세로 방향으로 정렬 */
+  min-height: 180px; /* 추가: 최소 높이 설정 */
+}
+
+#campus {
+  justify-content: flex-start; /* 내용을 상단에 맞춤 */
+}
+
+.mega-category h3 a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.mega-category h3 a span {
+  margin-right: 4px; 
+}
+
+.mega-category h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #263747;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.mega-category h3:hover {
+  color: #0078ff;
+}
+
+.mega-category ul {
+  flex-grow: 1; /* 목록이 카테고리 높이를 채우도록 확장 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-category ul li {
+  margin-bottom: 10px;
+}
+
+.mega-category ul li a {
+  display: block;
+  text-decoration: none;
+  color: #263747;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.mega-category ul li a:hover {
+  color: #0078ff;
+}
