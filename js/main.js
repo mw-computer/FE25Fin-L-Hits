@@ -134,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (index === 0) submenuContent.classList.add("active");
 
-
         // 서브메뉴 카테고리와 아이템 - 바로 첫번째 카테고리부터 표시
         if (item.submenus && item.submenus.length > 0) {
           item.submenus.forEach((submenu) => {
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const h3 = document.createElement("h3");
             h3.className = "submenu-heading"; // 새로운 클래스 추가
-            
+
             // 제목에 링크 추가
             const titleLink = document.createElement("a");
             titleLink.href = submenu.url;
@@ -208,18 +207,122 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // JSON 데이터 가져오기
-  fetch('./js/menuData.json')
-    .then(response => {
+  fetch("./js/menuData.json")
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('메뉴 데이터를 불러올 수 없습니다.');
+        throw new Error("메뉴 데이터를 불러올 수 없습니다.");
       }
       return response.json();
     })
-    .then(menuData => {
+    .then((menuData) => {
       // 메뉴 데이터를 사용하여 모바일 메뉴 설정
       setupMobileMenu(menuData);
     })
-    .catch(error => {
-      console.error('메뉴 데이터 로드 오류:', error);
+    .catch((error) => {
+      console.error("메뉴 데이터 로드 오류:", error);
     });
+
+  // setEventBanner 함수를 전역으로 사용할 수 있도록 설정
+  window.setEventBanner = function () {
+    // 슬라이더 요소들
+    const slides = document.querySelectorAll(".swiper-slide");
+    const LeftPrevButton = document.querySelector(".prev-button-left");
+    const RightPrevButton = document.querySelector(".prev-button-right");
+    const currentIndex = document.querySelector(".currentIndex");
+    const totalCount = document.querySelector(".totalCount");
+
+    if (
+      !slides.length ||
+      !LeftPrevButton ||
+      !RightPrevButton ||
+      !currentIndex ||
+      !totalCount
+    ) {
+      console.error("이벤트 배너 요소를 찾을 수 없습니다.");
+      return;
+    }
+
+    let activeSlideIndex = 1;
+    const totalSlides = slides.length;
+    let autoSlideInterval; // 인터벌 변수를 함수 스코프로 이동
+
+    // 초기 설정
+    totalCount.textContent = totalSlides;
+    updateSlider();
+
+    // 자동 슬라이드 타이머 설정 함수
+    function startAutoSlideTimer() {
+      // 기존 타이머가 있으면 제거
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+      }
+
+      // 새 타이머 설정 (3초 간격)
+      autoSlideInterval = setInterval(function () {
+        activeSlideIndex =
+          activeSlideIndex >= totalSlides ? 1 : activeSlideIndex + 1;
+        updateSlider();
+      }, 3000);
+    }
+
+    // 다음 슬라이드로 이동
+    RightPrevButton.addEventListener("click", function () {
+      activeSlideIndex =
+        activeSlideIndex >= totalSlides ? 1 : activeSlideIndex + 1;
+      updateSlider();
+      startAutoSlideTimer(); // 타이머 초기화
+    });
+
+    // 이전 슬라이드로 이동
+    LeftPrevButton.addEventListener("click", function () {
+      activeSlideIndex =
+        activeSlideIndex <= 1 ? totalSlides : activeSlideIndex - 1;
+      updateSlider();
+      startAutoSlideTimer(); // 타이머 초기화
+    });
+
+    // 슬라이더 업데이트 함수
+    function updateSlider() {
+      slides.forEach((slide) => {
+        slide.classList.remove("active", "prev", "last");
+      });
+
+      // 현재 슬라이드 활성화
+      const activeSlide = document.querySelector(
+        `[data-slide-index="${activeSlideIndex}"]`
+      );
+      if (activeSlide) {
+        activeSlide.classList.add("active");
+
+        // 이전 슬라이드 (시각적 효과용)
+        const prevSlideIndex =
+          activeSlideIndex <= 1 ? totalSlides : activeSlideIndex - 1;
+        const prevSlide = document.querySelector(
+          `[data-slide-index="${prevSlideIndex}"]`
+        );
+        if (prevSlide) {
+          prevSlide.classList.add("prev");
+        }
+
+        // 마지막 슬라이드 (시각적 효과용)
+        if (activeSlideIndex === totalSlides) {
+          activeSlide.classList.add("last");
+        }
+
+        // 현재 인덱스 표시 업데이트
+        currentIndex.textContent = activeSlideIndex;
+      }
+    }
+
+    // 자동 슬라이드 시작
+    startAutoSlideTimer();
+
+    // 페이지 떠날 때 인터벌 정리
+    window.addEventListener("beforeunload", () => {
+      clearInterval(autoSlideInterval);
+    });
+  };
+
+  // 이벤트 배너 즉시 초기화 (메뉴 데이터 로드와 별개로)
+  setEventBanner();
 });
