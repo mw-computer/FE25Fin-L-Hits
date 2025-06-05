@@ -80,6 +80,7 @@
 
 .card-title {
   font-size: 18px;
+  min-height: 50px;
   font-weight: 700;
   color: #0f1317;
   margin: 0 0 16px 0;
