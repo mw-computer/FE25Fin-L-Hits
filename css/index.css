@@ -6,6 +6,7 @@
 @import "navigationMobile.css";
 @import "eventBanner.css";
 @import "bannerAnimation.css";
+@import "subNavigation.css";
 
 * {
   margin: 0;

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // 컴포넌트 로드 함수
   async function loadComponent(elementId, componentPath) {
     try {
@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       const html = await response.text();
       document.getElementById(elementId).innerHTML = html;
-      
+
       // 이벤트 배너 로드 완료 후 초기화 함수 호출
-      if (elementId === 'event-banner-container' && window.setEventBanner) {
+      if (elementId === "event-banner-container" && window.setEventBanner) {
         window.setEventBanner();
       }
-      
+
       return true;
     } catch (error) {
       console.error(`컴포넌트 로드 실패: ${componentPath}`, error);
@@ -22,11 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // 메인 메뉴 로드
-  loadComponent('main-menu-container', './components/mainMenu.html');
-  
+  loadComponent("main-menu-container", "./components/mainMenu.html");
+
   // 우측 메뉴 로드
-  loadComponent('right-menu-container', './components/rightMenu.html');
+  loadComponent("right-menu-container", "./components/rightMenu.html");
 
   // 광고 배너 로드 - 비동기 로드 후 배너 초기화
-  loadComponent('event-banner-container', './components/eventBanner.html');
+  loadComponent("event-banner-container", "./components/eventBanner.html");
+
+  // 서브 네비게이션 로드 추가
+  loadComponent("sub-navigation-container", "./components/subNavigation.html");
 });

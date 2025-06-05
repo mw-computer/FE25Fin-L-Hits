@@ -1,0 +1,122 @@
+.sub-nav {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.sub-nav .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0px;
+}
+
+.sub-nav-items {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-nav-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  width: 117px;
+  height: 97px;
+  text-decoration: none;
+  color: #263747;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sub-nav-item:hover {
+  transform: translateY(-5px);
+}
+
+.sub-nav-item-image {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #dde1e6;
+}
+
+.sub-nav-item img {
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+  width: 32px;
+  height: 32px;
+}
+
+.sub-nav-item span {
+  font-size: 0.95em;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 946px) {
+  .sub-nav .container {
+    padding: 0 16px;
+    overflow: hidden; /* 넘치는 부분 숨김 */
+  }
+
+  .sub-nav-items {
+    display: flex;
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 (iOS) */
+    scroll-snap-type: x mandatory; /* 스크롤 스냅 효과 */
+    scrollbar-width: none; /* Firefox 스크롤바 숨김 */
+    -ms-overflow-style: none; /* IE, Edge 스크롤바 숨김 */
+    padding-bottom: 15px; /* 스크롤바 영역 확보 */
+    margin-bottom: -15px; /* 패딩 보상 */
+    justify-content: flex-start; /* 왼쪽부터 시작 */
+    gap: 24px;
+  }
+
+  /* Chrome, Safari 스크롤바 숨김 */
+  .sub-nav-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 스크롤 인디케이터(시각적 힌트) */
+  .sub-nav::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.8)
+    );
+    pointer-events: none; /* 클릭 이벤트 통과 */
+    z-index: 1;
+  }
+
+  .sub-nav-item span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .sub-nav-item-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-nav-item {
+    scroll-snap-align: start; /* 스크롤 스냅 지점 */
+    width: calc(33.333% - 16px); /* 3개가 보이도록 설정 */
+    min-width: 100px; /* 최소 너비 설정 */
+  }
+}
