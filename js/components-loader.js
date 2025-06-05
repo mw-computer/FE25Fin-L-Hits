@@ -32,4 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 서브 네비게이션 로드 추가
   loadComponent("sub-navigation-container", "./components/subNavigation.html");
+
+  // 메인 컨텐츠 로드
+  loadComponent("main-container", "./components/main.html");
 });

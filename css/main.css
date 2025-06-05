@@ -1,0 +1,165 @@
+.dev-course-wrapper .container {
+  padding-bottom: 60px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.dev-course-header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.dev-course-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #263747;
+  margin: 0;
+}
+
+.dev-course-more {
+  color: #8e9399;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-right {
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.dev-course-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dev-course-card {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dde1e6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dev-course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #263747;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.recruiting {
+  background-color: #e7f4ff;
+  color: #0078ff;
+}
+
+.d-day {
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.closed {
+  background-color: #f2f4f6;
+  color: #8e9399;
+}
+
+.open-alarm {
+  background-color: #fff2e9;
+  color: #ff7e36;
+}
+
+.gov-support {
+  background-color: #e7f7ef;
+  color: #00a768;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #263747;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  color: #8e9399;
+}
+
+.star {
+  color: #ffc107;
+  margin-right: 4px;
+}
+
+/* 반응형 */
+@media (max-width: 946px) {
+  .dev-course-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .dev-course-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .dev-course-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
