@@ -1,5 +1,5 @@
 .dev-course-wrapper .container {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -16,15 +16,17 @@
 }
 
 .dev-course-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  color: #263747;
+  color: #000000;
   margin: 0;
 }
 
 .dev-course-more {
-  color: #8e9399;
-  font-size: 14px;
+  color: #667380;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@
 
 .arrow-right {
   font-size: 18px;
-  margin-left: 4px;
+  align-items: center;
 }
 
 .dev-course-cards {
@@ -71,20 +73,32 @@
 
 .card-content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #263747;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1317;
   margin: 0 0 16px 0;
   line-height: 1.4;
+  
+  /* 말줄임표(...) 표시를 위한 속성 추가 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 2줄까지만 표시 */
+  line-clamp: 2; /* Standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  min-height: 26px;
   margin-bottom: 16px;
 }
 
@@ -126,6 +140,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 16px;
+  margin-top: 27px;
+  border-top: 1px solid #dce1e5;
 }
 
 .price {
