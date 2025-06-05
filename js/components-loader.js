@@ -35,4 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 메인 컨텐츠 로드
   loadComponent("main-container", "./components/main.html");
+
+  // 푸터 이벤트 배너 로드
+  loadComponent("footer-event-banner-container", "./components/footerEventBanner.html");
 });
