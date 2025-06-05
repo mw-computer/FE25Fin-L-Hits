@@ -8,6 +8,7 @@
 @import "bannerAnimation.css";
 @import "subNavigation.css";
 @import "main.css";
+@import "footerEventBanner.css";
 
 * {
   margin: 0;
