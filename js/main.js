@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 자동 슬라이드 시작
-    startAutoSlideTimer();
+    // startAutoSlideTimer();
 
     // 페이지 떠날 때 인터벌 정리
     window.addEventListener("beforeunload", () => {
