@@ -18,10 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 모바일 메뉴 기능 구현
   const setupMobileMenu = (menuData) => {
-    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileMenuClose = document.getElementById("mobile-menu-close");
-    const mobileMenuContent = document.querySelector(".mobile-menu-content");
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle"); // 모바일 메뉴 토글 버튼
+    const mobileMenu = document.getElementById("mobile-menu"); // 모바일 메뉴 전체 컨테이너
+    const mobileMenuClose = document.getElementById("mobile-menu-close"); // 모바일 메뉴 닫기 버튼
+    const mobileMenuContent = document.querySelector(".mobile-menu-content"); // 모바일 메뉴 내용 컨테이너
+    const mobileLogo = document.getElementById("mobile-logo"); // 모바일 메뉴 로고
 
     if (
       !mobileMenuToggle ||
@@ -188,6 +189,15 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenuContent.appendChild(rightColumn);
     }
 
+    // 메뉴 닫기 함수 (재사용을 위해 분리)
+    const closeMenu = () => {
+      mobileMenu.classList.remove("active");
+      setTimeout(() => {
+        mobileMenu.style.display = "none";
+      }, 300);
+      document.body.style.overflow = "";
+    };
+
     // 메뉴 토글 버튼 클릭 이벤트
     mobileMenuToggle.onclick = function () {
       mobileMenu.style.display = "block";
@@ -196,14 +206,19 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "hidden";
     };
 
-    // 닫기 버튼 클릭 이벤트
-    mobileMenuClose.onclick = function () {
-      mobileMenu.classList.remove("active");
-      setTimeout(() => {
-        mobileMenu.style.display = "none";
-      }, 300);
-      document.body.style.overflow = "";
-    };
+    // 닫기 버튼 클릭 이벤트 - 함수 사용
+    mobileMenuClose.onclick = closeMenu;
+
+    // 로고 클릭 이벤트 추가
+    if (mobileLogo) {
+      mobileLogo.addEventListener("click", function () {
+        closeMenu(); // 먼저 메뉴를 닫고
+        // 애니메이션 후 페이지 이동
+        setTimeout(() => {
+          window.location.href = "https://wonderful-dasik-842f7e.netlify.app/";
+        }, 300); // 애니메이션과 동일한 시간
+      });
+    }
   };
 
   // JSON 데이터 가져오기
@@ -322,7 +337,4 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(autoSlideInterval);
     });
   };
-
-  // 이벤트 배너 즉시 초기화 (메뉴 데이터 로드와 별개로)
-  setEventBanner();
 });
